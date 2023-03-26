@@ -36,7 +36,7 @@ struct BRDHRWalk
         <
                 typename BallPolytope
         >
-        inline void apply(BallPolytope const& P,
+        inline void apply(BallPolytope& P,
                           Point& p1,   // a point to start
                           Point& p2,
                           unsigned int const& walk_length,
@@ -60,7 +60,7 @@ struct BRDHRWalk
     private :
 
         template <typename GenericBody>
-        inline void initialize(GenericBody const& P,
+        inline void initialize(GenericBody& P,
                                Point const& p,
                                RandomNumberGenerator& rng)
         {
